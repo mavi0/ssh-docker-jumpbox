@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+
+  ssh-jumpbox:
+    image: ssh-jumpbox
+    container_name: ssh_jumpbox
+    volumes:
+      - /Users/arisaie/ssh-docker-jumpbox/config:/etc/ssh/config
+    # restart: unless-stopped
+    ports:
+      - "1022:22"
